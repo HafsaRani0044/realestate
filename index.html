@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login-page">
+        <h1>Login</h1>
+        <form id="login-form">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div id="home-page" style="display: none;">
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#add-to-bag">Add to Bag</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="hero">
+            <img src="hero-image.jpg" alt="Slogan Image">
+            <a href="#shop-now" class="shop-now-btn">Shop Now</a>
+        </section>
+
+        <section id="categories">
+            <h2>Categories</h2>
+            <div class="category">
+                <img src="park-view.jpg" alt="Park View Area">
+                <h3>Park View Area</h3>
+            </div>
+            <div class="category">
+                <img src="corner-plots.jpg" alt="Corner Plots">
+                <h3>Corner Plots</h3>
+            </div>
+            <div class="category">
+                <img src="bulletward.jpg" alt="Bulletward">
+                <h3>Bulletward</h3>
+            </div>
+            <div class="category">
+                <img src="average.jpg" alt="Average">
+                <h3>Average</h3>
+            </div>
+        </section>
+
+        <section id="contact-info">
+            <h2>Contact Us</h2>
+            <p>Email: info@realestate.com</p>
+            <p>Phone: +1 234 567 890</p>
+            <p>Address: 123 Real Estate Lane, Cityville</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Real Estate. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Simple login script to switch pages
+        const loginForm = document.getElementById('login-form');
+        const loginPage = document.getElementById('login-page');
+        const homePage = document.getElementById('home-page');
+
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            loginPage.style.display = 'none';
+            homePage.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
